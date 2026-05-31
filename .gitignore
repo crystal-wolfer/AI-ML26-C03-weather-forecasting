@@ -1,0 +1,14 @@
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+.virtual_documents/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# See README.md for datasets download instructions
+data/*.csv
