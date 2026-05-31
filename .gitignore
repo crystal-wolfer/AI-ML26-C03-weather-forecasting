@@ -11,4 +11,4 @@ __pycache__/
 .Python
 
 # See README.md for datasets download instructions
-data/*.csv
+data/**/*.csv
