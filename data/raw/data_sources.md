@@ -1,2 +1,4 @@
-Meteosat: https://meteostat.net/en/
+Open-Meteo: https://open-meteo.com/en/docs/historical-weather-api?hourly=&latitude=42.6975&longitude=23.3241&start_date=2016-01-01&end_date=2026-05-01&daily=temperature_2m_mean,precipitation_sum,rain_sum,snowfall_sum,wind_speed_10m_max,wind_gusts_10m_max,cloud_cover_max,cloud_cover_min,cloud_cover_mean,dew_point_2m_mean,dew_point_2m_max,dew_point_2m_min,relative_humidity_2m_mean,relative_humidity_2m_max,relative_humidity_2m_min,snowfall_water_equivalent_sum,pressure_msl_mean,pressure_msl_max,pressure_msl_min,surface_pressure_mean,surface_pressure_max,surface_pressure_min,wind_gusts_10m_mean,wind_speed_10m_mean,wind_gusts_10m_min,wind_speed_10m_min,vapour_pressure_deficit_max,soil_moisture_0_to_100cm_mean,soil_temperature_0_to_100cm_mean,apparent_temperature_max,apparent_temperature_min,wind_direction_10m_dominant&timezone=Europe%2FMoscow#location_and_time
+
+
 ECMWF: https://www.ecmwf.int/en/forecasts/datasets
