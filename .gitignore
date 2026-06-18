@@ -10,5 +10,8 @@ __pycache__/
 *.pyd
 .Python
 
+data/processed/*
+!data/processed/.gitkeep
+
 # See README.md for datasets download instructions
 data/**/*.csv
