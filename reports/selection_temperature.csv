@@ -1,0 +1,4 @@
+task,horizon,model,rmse,mae,skill_vs_persist,skill_vs_clim
+temperature,1,HistGradientBoosting,1.6417,1.22916,0.12846,0.58452
+temperature,3,Ridge,2.91216,2.23562,0.15149,0.24363
+temperature,7,Ridge,3.25736,2.53265,0.2234,0.13462

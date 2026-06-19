@@ -1,0 +1,34 @@
+timestamp,task,model,horizon,n_features,params,rmse,mae,skill_vs_persist,skill_vs_clim,fit_sec,f1,f1_bestthr,auc_roc,pr_auc,brier,best_threshold
+2026-06-19T16:01:56,temperature,Persistence,1,1,type=baseline,1.93329,1.41033,0.0,,,,,,,,
+2026-06-19T16:01:56,temperature,Climatology,1,1,type=baseline,3.7321,2.9584,-1.09767,,,,,,,,
+2026-06-19T16:01:56,temperature,Ridge,1,76,alpha=0.1,1.68425,1.25247,0.11193,0.57664,0.0,,,,,,
+2026-06-19T16:02:34,temperature,RandomForest,1,76,"max_depth=20, min_samples_leaf=5, n_estimators=200",1.70048,1.2691,0.10014,0.57102,38.3,,,,,,
+2026-06-19T16:02:38,temperature,HistGradientBoosting,1,76,"l2_regularization=0.0, learning_rate=0.03, max_iter=400, max_leaf_nodes=31, min_samples_leaf=20",1.6417,1.22916,0.12846,0.58452,4.2,,,,,,
+2026-06-19T16:02:45,temperature,MLP,1,76,"alpha=0.001, early_stopping=True, hidden_layer_sizes=(64, 32), max_iter=300",1.74885,1.30812,0.07247,0.55783,6.2,,,,,,
+2026-06-19T16:02:45,temperature,Persistence,3,1,type=baseline,3.50094,2.63475,0.0,,,,,,,,
+2026-06-19T16:02:45,temperature,Climatology,3,1,type=baseline,3.73071,2.95571,-0.12181,,,,,,,,
+2026-06-19T16:02:45,temperature,Ridge,3,76,alpha=0.1,2.91216,2.23562,0.15149,0.24363,0.0,,,,,,
+2026-06-19T16:03:28,temperature,RandomForest,3,76,"max_depth=20, min_samples_leaf=5, n_estimators=200",3.0537,2.34054,0.11167,0.20813,43.5,,,,,,
+2026-06-19T16:03:32,temperature,HistGradientBoosting,3,76,"l2_regularization=0.0, learning_rate=0.03, max_iter=400, max_leaf_nodes=31, min_samples_leaf=20",2.99764,2.31125,0.12278,0.21804,3.7,,,,,,
+2026-06-19T16:03:46,temperature,MLP,3,76,"alpha=0.001, early_stopping=True, hidden_layer_sizes=(64, 32), max_iter=300",3.48448,2.66702,-0.01225,0.09767,13.8,,,,,,
+2026-06-19T16:03:46,temperature,Persistence,7,1,type=baseline,4.22343,3.2612,0.0,,,,,,,,
+2026-06-19T16:03:46,temperature,Climatology,7,1,type=baseline,3.694,2.92664,0.10259,,,,,,,,
+2026-06-19T16:03:46,temperature,Ridge,7,76,alpha=0.1,3.25736,2.53265,0.2234,0.13462,0.0,,,,,,
+2026-06-19T16:04:34,temperature,RandomForest,7,76,"max_depth=20, min_samples_leaf=5, n_estimators=200",3.36992,2.65311,0.18646,0.09346,48.3,,,,,,
+2026-06-19T16:04:38,temperature,HistGradientBoosting,7,76,"l2_regularization=0.0, learning_rate=0.03, max_iter=400, max_leaf_nodes=31, min_samples_leaf=20",3.34446,2.64792,0.18805,0.09524,4.1,,,,,,
+2026-06-19T16:04:48,temperature,MLP,7,76,"alpha=0.001, early_stopping=True, hidden_layer_sizes=(64, 32), max_iter=300",3.89995,3.04325,0.06683,-0.03984,9.8,,,,,,
+2026-06-19T17:49:53,rain,MajorityClass,1,1,type=baseline,,,,,,0.0,0.0,0.5,0.40301,0.24138,0.5
+2026-06-19T17:49:53,rain,RainPersistence,1,1,type=baseline,,,,,,0.59959,0.59959,0.66453,0.52071,0.32295,0.5
+2026-06-19T17:49:55,rain,LogisticRegression,1,76,"C=1.0, class_weight=balanced, max_iter=1000",,,,,1.1,0.64262,0.65927,0.75929,0.67272,0.19766,0.41129
+2026-06-19T17:50:02,rain,RandomForest,1,76,"class_weight=balanced, max_depth=16, min_samples_leaf=5, n_estimators=300",,,,,7.3,0.63197,0.66785,0.76097,0.65944,0.19604,0.42054
+2026-06-19T17:50:06,rain,HistGradientBoosting,1,76,"class_weight=balanced, l2_regularization=1.0, learning_rate=0.03, max_iter=400, max_leaf_nodes=31, min_samples_leaf=30",,,,,3.7,0.6527,0.67214,0.76808,0.67845,0.19576,0.40375
+2026-06-19T17:50:06,rain,MajorityClass,3,1,type=baseline,,,,,,0.0,0.0,0.5,0.39809,0.24073,0.5
+2026-06-19T17:50:06,rain,RainPersistence,3,1,type=baseline,,,,,,0.4424,0.4424,0.53479,0.41649,0.44699,0.5
+2026-06-19T17:50:06,rain,LogisticRegression,3,76,"C=1.0, class_weight=balanced, max_iter=1000",,,,,0.8,0.53032,0.58023,0.62715,0.50865,0.23712,0.36296
+2026-06-19T17:50:13,rain,RandomForest,3,76,"class_weight=balanced, max_depth=16, min_samples_leaf=5, n_estimators=300",,,,,6.8,0.51928,0.59563,0.64035,0.51025,0.23158,0.35185
+2026-06-19T17:50:17,rain,HistGradientBoosting,3,76,"class_weight=balanced, l2_regularization=1.0, learning_rate=0.03, max_iter=400, max_leaf_nodes=31, min_samples_leaf=30",,,,,3.8,0.52228,0.59614,0.63407,0.5012,0.23666,0.29618
+2026-06-19T17:50:17,rain,MajorityClass,7,1,type=baseline,,,,,,0.0,0.0,0.5,0.39481,0.2403,0.5
+2026-06-19T17:50:17,rain,RainPersistence,7,1,type=baseline,,,,,,0.42368,0.42368,0.52051,0.40521,0.46011,0.5
+2026-06-19T17:50:18,rain,LogisticRegression,7,76,"C=1.0, class_weight=balanced, max_iter=1000",,,,,0.5,0.48035,0.56616,0.57078,0.48443,0.24702,0.16119
+2026-06-19T17:50:24,rain,RandomForest,7,76,"class_weight=balanced, max_depth=16, min_samples_leaf=5, n_estimators=300",,,,,6.7,0.46833,0.57022,0.59857,0.49102,0.23825,0.26359
+2026-06-19T17:50:28,rain,HistGradientBoosting,7,76,"class_weight=balanced, l2_regularization=1.0, learning_rate=0.03, max_iter=400, max_leaf_nodes=31, min_samples_leaf=30",,,,,3.9,0.47207,0.56913,0.58521,0.47615,0.24676,0.24094

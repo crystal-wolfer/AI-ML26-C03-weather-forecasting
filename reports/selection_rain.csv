@@ -1,0 +1,4 @@
+task,horizon,model,pr_auc,auc_roc,f1_bestthr,best_threshold,brier
+rain,1,HistGradientBoosting,0.67845,0.76808,0.67214,0.40375,0.19576
+rain,3,RandomForest,0.51025,0.64035,0.59563,0.35185,0.23158
+rain,7,RandomForest,0.49102,0.59857,0.57022,0.26359,0.23825
