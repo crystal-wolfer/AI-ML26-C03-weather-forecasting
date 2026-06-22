@@ -27,8 +27,16 @@ import streamlit as st
 # Paths and constants
 BASE_DIR = Path(__file__).resolve().parent
 
-MODELS_DIR = BASE_DIR / "models"
-PROCESSED_DIR = BASE_DIR / "forecast_data"
+def _resolve_dir(name: str) -> Path:
+    """Find a folder named `name` next to app.py or one level up (repo root)."""
+    for base in (BASE_DIR, BASE_DIR.parent):
+        candidate = base / name
+        if candidate.exists():
+            return candidate
+    return BASE_DIR / name
+
+MODELS_DIR = _resolve_dir("models")
+PROCESSED_DIR = _resolve_dir("forecast_data")
 FEATURE_COLS_PATH = PROCESSED_DIR / "feature_columns.json"
 SCALER_PATH = PROCESSED_DIR / "scaler.joblib"
 TEST_PARQUETS = [PROCESSED_DIR / "test_2025.parquet", PROCESSED_DIR / "test_2026.parquet"]
