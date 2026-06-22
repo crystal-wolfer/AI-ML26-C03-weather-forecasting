@@ -64,16 +64,55 @@ CITY_LABELS = {
 
 
 # Cached loaders
+def _find_model_file(task: str, horizon: int) -> str | None:
+    """Locate one model file, searching the resolved dir then recursively.
+
+    Checks MODELS_DIR directly, then does a recursive search under the repo root, so the file is found wherever it
+    actually landed in the checkout.
+    """
+    pattern = f"final_{task}_*_{horizon}d.joblib"
+    direct = glob.glob(str(MODELS_DIR / pattern))
+    if direct:
+        return direct[0]
+    for root in (BASE_DIR, BASE_DIR.parent):
+        deep = glob.glob(str(root / "**" / pattern), recursive=True)
+        if deep:
+            return deep[0]
+    return None
+
+
 @st.cache_resource
 def load_models() -> dict:
     """Load all final models, keyed by (task, horizon)."""
     models = {}
     for task in ("temperature", "rain"):
         for horizon in HORIZONS:
-            matches = glob.glob(str(MODELS_DIR / f"final_{task}_*_{horizon}d.joblib"))
-            if matches:
-                models[(task, horizon)] = joblib.load(matches[0])
+            path = _find_model_file(task, horizon)
+            if path:
+                models[(task, horizon)] = joblib.load(path)
     return models
+
+
+def _diagnostics() -> str:
+    """List candidate directories and their contents for troubleshooting."""
+    lines = []
+    seen = set()
+    for label, directory in [
+        ("app dir (BASE_DIR)", BASE_DIR),
+        ("repo root", BASE_DIR.parent),
+        ("resolved MODELS_DIR", MODELS_DIR),
+    ]:
+        key = str(directory)
+        if key in seen:
+            continue
+        seen.add(key)
+        try:
+            entries = sorted(p.name for p in directory.iterdir())
+            shown = ", ".join(entries[:60]) if entries else "(empty)"
+        except Exception as error:
+            shown = f"<cannot list: {error}>"
+        lines.append(f"{label}: {directory}\n    {shown}")
+    return "\n".join(lines)
 
 
 @st.cache_resource
@@ -226,6 +265,11 @@ def main() -> None:
 
     if not models:
         st.error(f"No model files found in {MODELS_DIR}.")
+        st.caption(
+            "If the models folder is empty or missing the large .joblib files, the big "
+            "RandomForest models were not pulled into the deployment."
+        )
+        st.code(_diagnostics())
         st.stop()
 
     # Inputs
