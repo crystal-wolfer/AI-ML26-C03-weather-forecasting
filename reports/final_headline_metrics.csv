@@ -1,0 +1,7 @@
+task,horizon,model,metric,test_2025,skill_vs_persist,skill_vs_clim
+temperature,1,HistGradientBoosting,RMSE,1.677,0.135,0.561
+temperature,3,Ridge,RMSE,3.057,0.173,0.184
+temperature,7,Ridge,RMSE,3.52,0.268,0.072
+rain,1,HistGradientBoosting,PR-AUC,0.73,,
+rain,3,RandomForest,PR-AUC,0.529,,
+rain,7,RandomForest,PR-AUC,0.461,,
