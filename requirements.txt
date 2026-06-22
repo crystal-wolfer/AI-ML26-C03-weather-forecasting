@@ -1,0 +1,20 @@
+# Install:  python -m venv .venv && .venv\Scripts\activate
+#           pip install -r requirements.txt
+
+# Core stack
+streamlit==1.51.0
+scikit-learn==1.7.2
+pandas==2.3.3
+numpy==2.3.5
+joblib==1.5.2
+pyarrow==21.0.0
+matplotlib==3.10.6
+
+# Notebook analysis: EDA, statistics, interpretability
+seaborn
+scipy
+statsmodels
+shap
+
+# Running the notebooks
+jupyterlab
