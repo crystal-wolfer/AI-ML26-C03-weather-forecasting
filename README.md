@@ -110,6 +110,7 @@ Experiments logged to CSV via a lightweight in-notebook tracker (no MLFlow depen
 - Discussion (markdown): adapting the pipeline to live Open-Meteo API calls, retraining cadence, a Streamlit forecast UI, and limitations / next steps
 
 ## Repository Structure
+```bash
 AI-ML26-C03-weather-forecasting/
 ├── README.md
 ├── .gitignore
@@ -127,7 +128,7 @@ AI-ML26-C03-weather-forecasting/
 
 `models/` and `reports/` start empty on purpose: run the notebooks and your
 outputs regenerate there, then diff them against the committed `artifacts/` copy.
-
+```
 ## How to work with this project
 
 ### Prerequisites
