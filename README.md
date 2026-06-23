@@ -1,6 +1,6 @@
 # AI-ML26-C03-weather-forecasting
 
-A machine learning project for multi-horizon weather forecasting across ten Bulgarian cities, using geographic feature encoding techniques. Part of the SoftUni Upskill Program AI and Machine Learning February 2026.
+A machine learning project for multi-horizon weather forecasting across ten Bulgarian cities, using geographic feature encoding techniques. Part of the SoftUni Upskill Program AI and Machine Learning February 2026. The primary goal of this project was to build something real and tangible, a working demo that anyone can try, not just a theoretical exercise, built end-to-end from scratch that later on can be expanded and further polished.
 
 **Live demo:** [Bulgaria Weather Forecast app](https://ai-ml26-c03-weather-forecasting-tvfwdjuxrh955sbtbeukur.streamlit.app/) - pick a city and date to see the model's +1/+3/+7-day temperature and rain outlook. No setup required.
 
